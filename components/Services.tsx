@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeartPulse, Dumbbell, Brain, ClipboardCheck } from 'lucide-react';
+import { HeartPulse, Dumbbell, Brain, ClipboardCheck, Leaf } from 'lucide-react';
 import { ServiceItem } from '../types';
 import { Reveal } from './Reveal';
 
@@ -20,8 +20,13 @@ const services: ServiceItem[] = [
     icon: Brain
   },
   {
+    title: "Nutrición",
+    description: "Nutrición consciente aplicada al centro de trabajo a través del método CDT de Ana Macías.",
+    icon: Leaf
+  },
+  {
     title: "Evaluaciones y Formación",
-    description: "Informes detallados sobre el estado físico y psicosocial del equipo, acompañados de talleres de ergonomía y salud.",
+    description: "Formaciones personalizadas para cada puesto de trabajo, bonificando al 100% su coste a través de los créditos FUNDAE.",
     icon: ClipboardCheck
   }
 ];
@@ -42,7 +47,7 @@ export const Services: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <Reveal key={index} delay={index * 150} className="h-full">
+            <Reveal key={index} delay={index * 150} className={`h-full ${index === services.length - 1 ? 'md:col-span-2' : ''}`}>
               <div 
                 className="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 h-full"
               >

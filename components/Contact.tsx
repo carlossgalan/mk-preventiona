@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
-import { Mail, CalendarCheck } from 'lucide-react';
+import { Mail, CalendarCheck, Phone } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 
@@ -40,20 +40,35 @@ export const Contact: React.FC = () => {
             <Reveal delay={400}>
               <h3 className="text-2xl font-display font-bold mb-4 text-white">¿Hablamos?</h3>
               <p className="text-gray-200 mb-8">
-                Descubra cómo transformar su empresa en una organización saludable con una reunión breve.
+                Realiza un diagnóstico de la salud de tu empresa de forma totalmente gratuita.
               </p>
               
               <div className="space-y-6">
-                <Button variant="primary" fullWidth className="h-12 text-lg">
+                <Button
+                  variant="primary"
+                  fullWidth
+                  className="h-12 text-lg"
+                  onClick={() => {
+                    window.location.href = 'mailto:hola@mkpreventionasl.com';
+                  }}
+                >
                   <CalendarCheck className="mr-2 h-5 w-5" />
                   Agendar Reunión
                 </Button>
                 
-                <div className="flex items-center justify-center md:justify-start gap-2 text-gray-300 mt-4 text-sm font-medium">
-                  <Mail size={18} />
-                  <a href="mailto:hola@mkpreventionasl.com" className="hover:text-mk-cyan transition-colors">
-                    hola@mkpreventionasl.com
-                  </a>
+                <div className="mt-4 flex items-center justify-between gap-4 text-sm font-medium text-gray-300">
+                  <div className="flex items-center gap-2">
+                    <Mail size={18} />
+                    <a href="mailto:hola@mkpreventionasl.com" className="hover:text-mk-cyan transition-colors">
+                      hola@mkpreventionasl.com
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone size={18} />
+                    <a href="tel:+34689100848" className="hover:text-mk-cyan transition-colors">
+                      +34 689 100 848
+                    </a>
+                  </div>
                 </div>
               </div>
             </Reveal>
