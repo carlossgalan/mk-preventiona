@@ -21,22 +21,22 @@ export const Contact: React.FC = () => {
             <Reveal delay={200}>
               <div className="space-y-4 mb-8 text-gray-200">
                 <p className="flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-mk-cyan"></span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-mk-cyan flex-shrink-0"></span>
                   Reducción drástica del absentismo.
                 </p>
                 <p className="flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-mk-cyan"></span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-mk-cyan flex-shrink-0"></span>
                   Mejora del rendimiento y la productividad.
                 </p>
                 <p className="flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-mk-cyan"></span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-mk-cyan flex-shrink-0"></span>
                   Fortalecimiento de la imagen corporativa (RSC).
                 </p>
               </div>
             </Reveal>
           </div>
 
-          <div className="bg-white/5 p-10 rounded-2xl backdrop-blur-md border border-white/10 text-center md:text-left shadow-2xl">
+          <div className="bg-white/5 p-10 rounded-2xl backdrop-blur-md border border-white/10 text-center md:text-left shadow-xl">
             <Reveal delay={400}>
               <h3 className="text-2xl font-display font-bold mb-4 text-white">¿Hablamos?</h3>
               <p className="text-gray-200 mb-8">
@@ -44,7 +44,7 @@ export const Contact: React.FC = () => {
               </p>
               
               <div className="space-y-6">
-                <Button variant="primary" fullWidth className="h-14 text-lg font-bold shadow-lg shadow-mk-blue/50">
+                <Button variant="primary" fullWidth className="h-12 text-lg">
                   <CalendarCheck className="mr-2 h-5 w-5" />
                   Agendar Reunión
                 </Button>

@@ -84,13 +84,13 @@ export const Methodology: React.FC = () => {
             {steps.map((step, index) => (
               <Reveal key={index} delay={index * 150} className="h-full">
                 <div className="relative group h-full">
-                  <div className="text-6xl font-display font-extrabold text-mk-light mb-4 group-hover:text-mk-cyan/20 transition-colors duration-300">
+                  <div className="text-6xl font-display font-extrabold text-mk-blue/10 mb-4 group-hover:text-mk-cyan/20 transition-colors duration-300">
                     {step.number}
                   </div>
                   <h4 className="text-lg font-bold font-display text-mk-blue mb-2">{step.title}</h4>
                   <p className="text-mk-gray text-sm leading-relaxed">{step.description}</p>
                   {index < 3 && (
-                    <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gray-100 -ml-4 z-[-1]"></div>
+                    <div className="hidden md:block absolute top-10 left-full w-full h-px bg-gray-200 -ml-4 z-[-1]"></div>
                   )}
                 </div>
               </Reveal>

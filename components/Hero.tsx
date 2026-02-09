@@ -13,14 +13,14 @@ export const Hero: React.FC = () => {
           alt="Corporate Wellness Environment" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-mk-blue/50 to-mk-blue/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-mk-blue/90 via-mk-blue/70 to-mk-blue/40"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left pt-16">
         <div className="max-w-4xl">
           <Reveal delay={200}>
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-mk-cyan/30 bg-mk-blue/50 text-mk-cyan text-xs font-bold uppercase tracking-wider mb-8 backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-mk-cyan mr-3 animate-pulse"></span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full border border-mk-cyan/20 bg-mk-blue/40 text-mk-cyan text-xs font-semibold uppercase tracking-wider mb-8 backdrop-blur-sm">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-mk-cyan mr-3"></span>
               Innovación en Salud Corporativa
             </div>
           </Reveal>

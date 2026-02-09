@@ -55,7 +55,7 @@ export const Philosophy: React.FC = () => {
                 <Reveal key={index} delay={300 + (index * 150)}>
                   <div className="flex items-start group">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-mk-cyan/10 text-mk-cyan group-hover:bg-mk-cyan group-hover:text-white transition-colors duration-300">
+                      <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-mk-cyan/10 text-mk-cyan group-hover:bg-mk-cyan/20 transition-colors duration-300">
                         <pillar.icon size={26} strokeWidth={2} />
                       </div>
                     </div>
@@ -72,23 +72,17 @@ export const Philosophy: React.FC = () => {
           {/* Visual/Image Side */}
           <div className="relative mt-12 lg:mt-0">
             <Reveal delay={300} className="relative">
-              <div className="absolute -inset-4 bg-mk-cyan/10 rounded-2xl transform -rotate-2"></div>
-              <div className="absolute -inset-4 bg-mk-blue/5 rounded-2xl transform rotate-2"></div>
               <img 
                 src="/cuello.jpeg" 
                 alt="Professional physiotherapy session" 
-                className="relative rounded-2xl shadow-xl w-full object-cover h-[600px] z-10"
+                className="rounded-2xl shadow-2xl w-full object-cover h-[600px]"
               />
               
               {/* Floating Stat Card */}
-              <div className="absolute bottom-10 -left-10 z-20 bg-white p-6 rounded-lg shadow-xl border-l-4 border-mk-cyan max-w-xs hidden md:block">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 bg-mk-cyan/10 rounded-full text-mk-cyan">
-                    <Activity size={20} />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-mk-gray">Impacto Real</span>
-                </div>
-                <p className="text-2xl font-display font-bold text-mk-blue">Aseguramos un descenso de un 30% de absentismo laboral en tan solo 3 meses</p>
+              <div className="absolute bottom-8 -left-6 z-20 bg-white p-5 rounded-xl shadow-lg border-l-4 border-mk-cyan max-w-[220px] hidden md:block">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-mk-gray/70">Impacto Real</span>
+                <p className="text-4xl font-display font-extrabold text-mk-blue leading-none mt-1.5">-30%</p>
+                <p className="text-sm text-mk-gray mt-1.5 leading-snug">de absentismo laboral en 3 meses</p>
               </div>
             </Reveal>
           </div>

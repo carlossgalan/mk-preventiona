@@ -11,23 +11,22 @@ const partners = Array.from({ length: 11 }, (_, i) => ({
 
 export const Partners: React.FC = () => {
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado */}
         <Reveal>
-          <div className="text-center mb-16">
-            <h3 className="text-2xl md:text-3xl font-display font-light text-mk-gray mb-6">
+          <div className="text-center mb-14">
+            <h3 className="text-xl md:text-2xl font-display font-light text-mk-gray">
               Las siguientes empresas ya están <br className="hidden md:block" />
-              aplicando el plan <span className="font-bold text-mk-blue">MK Preventiona</span>
+              aplicando el plan <span className="font-semibold text-mk-blue">MK Preventiona</span>
             </h3>
-            <div className="w-24 h-1 bg-mk-blue mx-auto rounded-full"></div>
           </div>
         </Reveal>
 
         {/* Carrusel Infinito */}
         <Reveal delay={200}>
-          <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+          <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
             <div className="flex items-center justify-center md:justify-start [&_div]:mx-8 animate-infinite-scroll hover-pause">
               {/* Duplicamos los logos para asegurar el bucle infinito fluido */}
               {[...partners, ...partners].map((partner, index) => (

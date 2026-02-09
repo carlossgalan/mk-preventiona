@@ -23,7 +23,7 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo Construction */}
@@ -66,22 +66,20 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl">
-          <div className="px-4 pt-4 pb-6 space-y-2">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-3 rounded-lg text-base font-bold font-display text-mk-blue hover:text-mk-cyan hover:bg-gray-50"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+      <div className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg overflow-hidden transition-all duration-300 ease-out ${isOpen ? 'max-h-80 opacity-100 border-t border-gray-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-4 pt-4 pb-6 space-y-1">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-3 rounded-lg text-base font-semibold font-display text-mk-blue hover:text-mk-cyan hover:bg-mk-light transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };

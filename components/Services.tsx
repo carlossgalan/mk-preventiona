@@ -44,19 +44,17 @@ export const Services: React.FC = () => {
           {services.map((service, index) => (
             <Reveal key={index} delay={index * 150} className="h-full">
               <div 
-                className="group bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-mk-cyan relative overflow-hidden h-full"
+                className="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 h-full"
               >
-                <div className="absolute top-0 right-0 w-40 h-40 bg-mk-light rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110 duration-500"></div>
-                
-                <div className="relative z-10 flex flex-col sm:flex-row sm:items-start gap-6">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="h-16 w-16 bg-mk-blue rounded-lg flex items-center justify-center text-white shadow-lg shadow-mk-blue/20 group-hover:bg-mk-cyan transition-colors duration-300">
-                      <service.icon size={32} />
+                    <div className="h-14 w-14 bg-mk-blue rounded-xl flex items-center justify-center text-white group-hover:bg-mk-cyan transition-colors duration-300">
+                      <service.icon size={28} />
                     </div>
                   </div>
                   
                   <div>
-                    <h4 className="text-xl font-display font-bold text-mk-blue mb-3 group-hover:text-mk-cyan transition-colors">{service.title}</h4>
+                    <h4 className="text-xl font-display font-bold text-mk-blue mb-3">{service.title}</h4>
                     <p className="text-mk-gray leading-relaxed">
                       {service.description}
                     </p>
